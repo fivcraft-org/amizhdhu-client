@@ -256,11 +256,11 @@ const Sidebar = ({ opened, setOpened, isMobile = false, userRole, userDesignatio
       `}
     >
       {/* HEADER */}
-      <div className={`items-center justify-between px-3 ${opened ? "py-0 flex" : "py-4 items-center text-center"} border-b border-white/20`}>
-        {opened && <img src={Logo} className="w-50 h-[70px] object-contain" />}
+      <div className={`bg-main text-primary h-[70px] relative flex items-center justify-center border-b border-gray-200 shadow-sm`}>
+        {opened && <img src={Logo} className="h-[85px] object-contain" />}
         <button
           onClick={() => setOpened((prev) => !prev)}
-          className={`${opened ? "ml-2" : "ml-0"} p-2 rounded-md hover:bg-white/20 transition`}
+          className={`p-2 rounded-md hover:bg-gray-200 transition text-primary ${opened ? "absolute right-3" : ""}`}
         >
           {opened ? <PanelLeft size={22} /> : <PanelRight size={22} />}
         </button>
