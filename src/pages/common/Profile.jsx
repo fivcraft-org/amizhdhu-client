@@ -2,6 +2,7 @@ import { Avatar, Modal, TextInput, Button, PinInput, Stack, Group, Text } from "
 import { notifications } from "@mantine/notifications";
 import { useState, useEffect } from "react";
 import useAuth from "../../hooks/useAuth";
+import { User, Mail, Phone, Briefcase, Shield, Edit2, Key, ChevronRight } from "lucide-react";
 
 import ProfileImg from "../../assets/images/avatar-logo.png";
 import { updateProfile as apiUpdateProfile, updatePinApi } from "../../api/auth/auth";
@@ -166,193 +167,177 @@ export default function Profile() {
 
 
   return (
-    <div className="p-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* LEFT SECTION */}
-        <div className="space-y-6">
-          <div className="border rounded-xl bg-white shadow">
-            <div className="flex items-center justify-between px-6 py-4 bg-[#E1F3F1] rounded-t-xl">
-              <h3 className="text-lg font-semibold text-primary">
-                Personal Information
-              </h3>
-
-              <button
-                onClick={() => {
-                  setEditData({
-                    name: user?.name || "",
-                    phone: user?.phone || user?.phoneNumber || user?.contact || user?.mobile || "",
-                  });
-
-
-                  setPhoneError("");
-                  setNameError("");
-                  setEditOpen(true);
-                }}
-                className="bg-primary text-white px-4 py-2 rounded-md"
-              >
-                Edit Profile
-              </button>
-            </div>
-
-            <div className="p-6">
-              {/* Profile */}
-              <div className="flex gap-5 pb-6">
-                <Avatar src={ProfileImg} size={90} radius="xl" />
-
-                <div>
-                  <p className="text-xl font-semibold">{user?.name}</p>
-                  <p className="text-gray-600">{user?.designation}</p>
-                </div>
-              </div>
-
-              {/* Contact */}
-              <div className="mb-6">
-                <p className="font-semibold">Legal Name</p>
-                <p>{user?.name}</p>
-
-                <p className="font-semibold mt-3">Contact Number</p>
-                <p>{user?.phone || user?.phoneNumber || user?.contact || user?.mobile || "+91 9876543210"}</p>
-
-
-              </div>
-            </div>
+    <div className="p-6 max-w-5xl mx-auto animate-fadeInUp pb-16">
+      
+      {/* 1. TIGHTENED HERO HEADER (Theme Anchored) */}
+      <div className="relative bg-[var(--color-primary)] h-36 md:h-40 rounded-[32px] shadow-md border border-[var(--color-cream)] overflow-visible mb-16 mt-4">
+        {/* Thematic Geometric Overlays */}
+        <div className="absolute top-[-30%] right-[-10%] w-64 h-64 bg-[var(--color-bg-main)] opacity-[0.08] rounded-full blur-2xl"></div>
+        <div className="absolute bottom-[-20%] left-[10%] w-40 h-40 bg-emerald-300 opacity-[0.12] rounded-full blur-xl"></div>
+        
+        {/* Floating Avatar & Identity Slot */}
+        <div className="absolute -bottom-10 left-8 flex items-end gap-5">
+          {/* Theme Squircle Wrapper */}
+          <div className="w-28 h-28 md:w-32 md:h-32 bg-white rounded-[28px] p-1 shadow-lg border border-[var(--color-cream)] relative z-10 group">
+            <Avatar 
+              src={ProfileImg} 
+              size="100%"
+              className="w-full h-full rounded-[24px] object-cover ring-1 ring-gray-100 shadow-inner transition-transform duration-500 group-hover:scale-[1.02]" 
+            />
+          </div>
+          <div className="pb-3 flex flex-col gap-1">
+            <h1 className="text-2xl md:text-3xl font-black text-[var(--color-secondary)] bg-white px-5 py-1 rounded-2xl shadow-sm border border-[var(--color-cream)] tracking-tight backdrop-blur-md">
+              {user?.name}
+            </h1>
           </div>
         </div>
 
-        {/* RIGHT SECTION */}
-        <div className="space-y-6">
-          {/* EMPLOYEE INFORMATION CARD */}
-          <div className="border rounded-xl bg-white shadow">
-            <div className="flex items-center justify-between px-6 py-4 bg-[#E1F3F1] rounded-t-xl">
-              <h3 className="text-lg font-semibold text-primary">
-                Employee Information
-              </h3>
-            </div>
+        {/* Minimal Action Floating inside Hero */}
+        <button
+          onClick={() => {
+            setEditData({
+              name: user?.name || "",
+              phone: user?.phone || user?.phoneNumber || user?.contact || user?.mobile || "",
+            });
+            setPhoneError("");
+            setNameError("");
+            setEditOpen(true);
+          }}
+          className="absolute top-6 right-6 bg-white hover:bg-[var(--color-cream)] text-[var(--color-primary)] px-4 py-2 rounded-xl font-bold shadow-sm border border-[var(--color-cream)] text-xs md:text-sm flex items-center gap-2 transition-all hover:-translate-y-0.5 active:scale-95 z-10"
+        >
+          <Edit2 size={15} />
+          Edit Profile
+        </button>
+      </div>
 
-            <div className="p-6">
-              <p>
-                <span className="font-semibold">Email :</span> {user?.email}
-              </p>
-
-              <p className="mt-2">
-                <span className="font-semibold">Employee ID :</span>{" "}
-                {user?.employeeId || "USER001"}
-              </p>
-
-              <p className="mt-2">
-                <span className="font-semibold">Designation :</span>{" "}
-                {user?.designation || "Senior Microbiologist"}
-              </p>
-
-              {/* <p className="mt-2">
-                <span className="font-semibold">Phone :</span>{" "}
-                {user?.phone || user?.phoneNumber || user?.contact || user?.mobile || "—"}
-              </p> */}
-            </div>
-          </div>
-
-          {/* ACCOUNT INFORMATION CARD (PREVIOUSLY SECURITY SETTINGS) */}
-          <div className="border rounded-xl bg-white shadow">
-            <div className="px-6 py-4 bg-[#E1F3F1] rounded-t-xl">
-              <h3 className="text-lg font-semibold text-primary">
-                Account Information
-              </h3>
-            </div>
-
-            <div className="p-6">
-              {/* Account Secured Box */}
-              <div className="bg-green-100 p-5 rounded-lg flex gap-3 items-start">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 text-green-700 mt-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 11c.5304 0 1.0391-.2107 1.4142-.5858C13.7893 10.0391 14 9.53043 14 9V5c0-1.65685-1.3431-3-3-3S8 3.34315 8 5v4c0 .53043.21071 1.0391.58579 1.4142C8.96086 10.7893 9.46957 11 10 11m7 0v7a2 2 0 01-2 2H9a2 2 0 01-2-2v-7h10z"
-                  />
-                </svg>
-
+      {/* THE 3-PANEL GRID: Compactly Nested */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        {/* LEFT CLUSTER: Compact Overview Cards (Span 4) */}
+        <div className="lg:col-span-4 flex flex-col gap-6">
+          
+          {/* Card A: Identification Block */}
+          <div className="bg-white rounded-[24px] border border-[var(--color-cream)] p-5 shadow-sm relative overflow-hidden transition-all hover:shadow-md">
+            {/* Thematic Vertical Side-Border Accent */}
+            <div className="absolute left-0 top-0 w-1.5 h-full bg-[var(--color-primary)]"></div>
+            
+            <h3 className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4 pl-2 border-b border-gray-50 pb-2">
+              Registry Overview
+            </h3>
+            
+            <div className="space-y-3 pl-1">
+              {/* Compact Info Row A */}
+              <div className="bg-[var(--color-bg-main)] p-3.5 rounded-2xl border border-[var(--color-cream)] flex items-center gap-3.5 group cursor-default">
+                <div className="w-10 h-10 bg-white rounded-xl shadow-sm border border-[var(--color-cream)] flex items-center justify-center text-[var(--color-primary)] transition-transform group-hover:scale-105">
+                  <Briefcase size={18} />
+                </div>
                 <div>
-                  <p className="font-semibold text-green-700 text-lg">
-                    Account Secured
-                  </p>
-                  <p className="text-sm text-gray-700">
-                    Your account is protected with PIN authentication
-                  </p>
+                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-0.5">System ID</p>
+                  <p className="text-[var(--color-secondary)] font-black font-mono text-[15px] tracking-wider">{user?.employeeId || "EMP_DATA"}</p>
                 </div>
               </div>
 
-              {/* Security Features */}
-              {/* <h4 className="mt-6 font-semibold text-lg">Security Features</h4>
-
-              <ul className="mt-3 space-y-1 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <span className="text-green-600 text-xl">•</span>
-                  12-hour session timeout
-                </li>
-
-                <li className="flex items-center gap-2">
-                  <span className="text-green-600 text-xl">•</span>
-                  PIN-based authentication
-                </li>
-
-                <li className="flex items-center gap-2">
-                  <span className="text-green-600 text-xl">•</span>
-                  Activity logging
-                </li>
-
-                <li className="flex items-center gap-2">
-                  <span className="text-green-600 text-xl">•</span>
-                  Role-based access control
-                </li>
-              </ul> */}
-
-              <Button
-                onClick={() => {
-                  setPinModalOpen(true);
-                }}
-                variant="light"
-                color="teal"
-                fullWidth
-                className="mt-6"
-              >
-                Change Security PIN
-              </Button>
+              {/* Compact Info Row B */}
+              <div className="bg-white p-3 rounded-2xl border border-transparent flex items-center gap-3.5 group cursor-default hover:bg-gray-50/50 transition-colors">
+                <div className="w-10 h-10 bg-[var(--color-bg-main)] rounded-xl border border-[var(--color-cream)] flex items-center justify-center text-gray-400 group-hover:text-emerald-600 transition-colors">
+                  <Shield size={18} />
+                </div>
+                <div>
+                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-0.5">Status Rank</p>
+                  <p className="text-[var(--color-secondary)] font-bold text-[14px] tracking-wide">{user?.role || "Member"}</p>
+                </div>
+              </div>
             </div>
           </div>
+          
+          {/* Card B: Secure Credentials Control Slab */}
+          <div className="bg-[var(--color-bg-main)] border border-[var(--color-cream)] rounded-[24px] p-6 shadow-sm relative group/slab transition-all duration-300 hover:border-emerald-200/50">
+             <div className="flex items-center gap-4 mb-4 border-b border-[var(--color-cream)] pb-4 border-dashed">
+                <div className="w-11 h-11 bg-white rounded-xl shadow-sm border border-[var(--color-cream)] flex items-center justify-center text-emerald-600 transition-transform group-hover/slab:-rotate-3">
+                  <Key size={20} />
+                </div>
+                <div>
+                  <h4 className="text-sm font-black text-[var(--color-secondary)]">Access PIN</h4>
+                  <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider tracking-widest">Account Integrity</p>
+                </div>
+             </div>
+             
+             <Button
+                onClick={() => setPinModalOpen(true)}
+                className="bg-white hover:bg-emerald-600 text-emerald-700 hover:text-white border border-[var(--color-cream)] hover:border-emerald-600 w-full h-11 rounded-xl font-black text-xs tracking-widest shadow-sm transition-all duration-300 active:scale-95"
+             >
+               CYCLE SECURITY PIN
+             </Button>
+          </div>
+        </div>
 
-          {/* SESSION CARD */}
-          {/* <div className="border rounded-xl bg-white shadow">
-            <div className="px-6 py-4 bg-[#E1F3F1] rounded-t-xl">
-              <h3 className="text-lg font-semibold text-primary">
-                Session Information
+        {/* RIGHT CLUSTER: Dense Information Dossier (Span 8) */}
+        <div className="lg:col-span-8">
+          <div className="bg-white rounded-[24px] border border-[var(--color-cream)] p-7 md:p-8 shadow-sm h-full relative flex flex-col transition-all hover:shadow-md">
+            
+            {/* Sub Header: Theme Optimized */}
+            <div className="flex items-center justify-between mb-8 border-b border-gray-50 pb-5">
+              <h3 className="text-xl font-black text-[var(--color-secondary)] tracking-tight flex items-center gap-3">
+                <div className="p-2 bg-[var(--color-bg-main)] rounded-lg border border-[var(--color-cream)] text-[var(--color-primary)] flex items-center justify-center">
+                  <User size={18} />
+                </div>
+                Personal Dossier
               </h3>
+              <div className="flex items-center gap-2 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-100 text-[9px] font-black uppercase tracking-widest">
+                <div className="w-1 h-1 bg-emerald-500 rounded-full animate-pulse"></div>
+                Verified Active
+              </div>
             </div>
 
-            <div className="p-6">
-              <div className="bg-[#D3E9EA] p-4 rounded-lg flex items-center justify-between">
-                <div>
-                  <p className="font-semibold flex items-center gap-2">
-                    <Clock size={18} /> Active Session
-                  </p>
-                  <span className="text-sm text-gray-600">
-                    Expires in {expiresIn || "—"}
+            {/* Highly Dense Condensed Grid Fields (Fixes "empty" feel) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
+              
+              {/* Field Container 1 */}
+              <div className="group">
+                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1.5 group-hover:text-[var(--color-primary)] transition-colors pl-1">Legal Identity</p>
+                <div className="bg-[var(--color-bg-main)]/50 border border-[var(--color-cream)]/60 rounded-xl p-3 flex items-center transition-all group-hover:bg-white group-hover:border-[var(--color-cream)] group-hover:shadow-sm">
+                  <span className="font-bold text-[var(--color-secondary)] text-[15px] leading-none">{user?.name}</span>
+                </div>
+              </div>
+
+              {/* Field Container 2 */}
+              <div className="group">
+                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1.5 group-hover:text-[var(--color-primary)] transition-colors pl-1">Gateway Mail</p>
+                <div className="bg-[var(--color-bg-main)]/50 border border-[var(--color-cream)]/60 rounded-xl p-3 flex items-center gap-2.5 transition-all group-hover:bg-white group-hover:border-[var(--color-cream)] group-hover:shadow-sm">
+                  <Mail size={15} className="text-gray-400 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <span className="font-bold text-[var(--color-secondary)] text-[14px] truncate">{user?.email}</span>
+                </div>
+              </div>
+
+              {/* Field Container 3 */}
+              <div className="group">
+                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1.5 group-hover:text-[var(--color-primary)] transition-colors pl-1">Role Designation</p>
+                <div className="bg-[var(--color-bg-main)]/50 border border-[var(--color-cream)]/60 rounded-xl p-3 flex items-center transition-all group-hover:bg-white group-hover:border-[var(--color-cream)] group-hover:shadow-sm">
+                  <span className="font-bold text-[var(--color-secondary)] text-[15px]">{user?.designation || "N/A"}</span>
+                </div>
+              </div>
+
+              {/* Field Container 4 */}
+              <div className="group">
+                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1.5 group-hover:text-[var(--color-primary)] transition-colors pl-1">Mobile Registry</p>
+                <div className="bg-[var(--color-bg-main)]/50 border border-[var(--color-cream)]/60 rounded-xl p-3 flex items-center gap-2.5 transition-all group-hover:bg-white group-hover:border-[var(--color-cream)] group-hover:shadow-sm">
+                  <Phone size={15} className="text-gray-400 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <span className="font-bold text-[var(--color-secondary)] text-[15px]">
+                    {user?.phone || user?.phoneNumber || user?.contact || user?.mobile || "Not Linked"}
                   </span>
                 </div>
-
-                <div className="text-sm text-primary font-semibold">
-                  Last Login <br />
-                  {lastLogin}
-                </div>
               </div>
+
             </div>
-          </div> */}
+
+            {/* Soft Corner Branding Logo Placement */}
+            <div className="mt-auto pt-10 flex justify-end opacity-5 select-none pointer-events-none">
+              <img src={ProfileImg} className="w-16 h-16 grayscale" alt="watermark" />
+            </div>
+
+          </div>
         </div>
+
       </div>
 
       {/* EDIT MODAL */}

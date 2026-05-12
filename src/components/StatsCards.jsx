@@ -1,65 +1,78 @@
-import { Card, Text, Image, SimpleGrid ,Button} from "@mantine/core";
+import { Card, Text, Image, SimpleGrid, Button } from "@mantine/core";
 
 export default function StatsCards({ items = [], cols }) {
   return (
-    <SimpleGrid cols={cols || { base: 1, xs: 2, sm: 3, lg: 5 }} spacing="lg">
+    <SimpleGrid 
+      cols={cols || { base: 1, xs: 2, sm: 3, lg: 5 }} 
+      spacing="md" 
+    >
       {items.map((card, index) => (
         <Card
           key={index}
           withBorder
-          padding="xs"
-          radius="lg"
-          shadow="sm"
-          className="flex flex-col justify-between"
-          style={{ borderLeft: "4px solid var(--color-primary)" }}
+          padding="sm" 
+          radius="md"
+          className="group relative overflow-hidden transition-all duration-300 bg-white hover:shadow-md hover:-translate-y-0.5 border-gray-100 shadow-sm flex flex-col justify-center h-full"
         >
-          <div className="flex justify-between items-center">
-            {/* LEFT TEXT */}
-            <div>
-              <Text size="sm" c="gray.6">
+          {/* Subtle, elegant border-left accent that grows slightly on hover */}
+          <div className="absolute left-0 top-0 h-full w-1 bg-primary group-hover:w-[6px] transition-all duration-300" />
+          
+          <div className="flex justify-between items-center pl-3 relative z-10">
+            
+            {/* TEXT SECTION (Original Format) */}
+            <div className="flex flex-col flex-1 min-w-0 pr-2">
+              <Text 
+                className="text-[9px] font-bold text-gray-400 tracking-normal leading-tight"
+                mb={1}
+              >
                 {card.title}
               </Text>
-               <div>
+              
+              <div>
                 {card.action ? (
-                  <Button
-                    size="xs"
-                    variant="light"
-                    color="teal"
-                    onClick={card.onAction}
-                  >
-                    {card.action}
-                  </Button>
+                  <div className="mt-1">
+                    <Button
+                      size="xs"
+                      variant="light"
+                      color="teal"
+                      radius="md"
+                      onClick={card.onAction}
+                      className="font-semibold px-2 py-0 h-6 text-[10px]"
+                    >
+                      {card.action}
+                    </Button>
+                  </div>
                 ) : (
-                  <Text component="div" size="xl" fw={600} mt={5} c="var(--color-primary)">
+                  <Text 
+                    className="text-base font-black text-secondary tracking-tight leading-tight"
+                  >
                     {card.value}
                   </Text>
                 )}
               </div>
             </div>
 
-            {/* ICON INSIDE CIRCLE BORDER */}
+            {/* CREATIVE ICON CONTAINER (Matched to Cream Aesthetic) */}
             <div
-              className="flex items-center justify-center"
-              style={{
-                border: "1px solid var(--color-primary)",
-                borderRadius: "50%",
-                backgroundColor: "#E0F2F1",
-                width: 50,
-                height: 50,
-                padding: 8,
-              }}
+              className="
+                flex items-center justify-center shrink-0 
+                w-11 h-11 rounded-xl 
+                bg-gradient-to-br from-white to-[var(--color-bg-main)] 
+                shadow-sm border border-[var(--color-cream)]
+                group-hover:scale-105 transition-transform duration-300 ease-out
+              "
             >
               <Image
                 src={card.icon}
                 alt={card.title}
                 fit="contain"
-                w={card.iconWidth || 40}
-                h={card.iconHeight || 40}
+                w={card.iconWidth || 26}
+                h={card.iconHeight || 26}
+                className="drop-shadow-sm group-hover:rotate-3 transition-transform duration-300"
               />
             </div>
+            
           </div>
-
-
         </Card>
       ))}
     </SimpleGrid>
