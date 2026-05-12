@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@import "@mantine/core/styles.css";
+@import "@mantine/notifications/styles.css";
+@import "@mantine/dates/styles.css";
+
+/* --------------------------------------------------
+   GLOBAL FONT + RESET (no forced dark background)
+--------------------------------------------------- */
+:root {
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------
+   TAILWIND THEME TOKENS (auto-create utilities)
+--------------------------------------------------- */
+@theme {
+  --color-primary: #204A2A; /* Forest Green */
+  --color-primary-light: #E8F5E9;
+  
+  --color-secondary: #07213C; /* Deep Navy */
+  --color-accent: #769642; /* Pasture Green */
+  --color-brass: #6E553E; /* Rustic Brass */
+  --color-cream: #F1E5CD; /* Milk Cream */
+
+  --color-bg-main: #FDFBF7; /* Light Soft Cream */
+  --color-bg-light: #FFFFFF;
+
+  --color-text-dark: #07213C;
+  --color-text-light: #6E6D6A;
+
+  --gradient-amizhdhu: linear-gradient(135deg, #07213C, #204A2A);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fadeInUp: fadeInUp 0.8s ease-out forwards;
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+/* Optional: background utility using gradient */
+.bg-taimeryu-gradient {
+  background: var(--gradient-taimeryu);
+}
+
+.bg-main {
+  background-color: var(--color-bg-main);
+}
+
+.pin-animate {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: pinFade 0.35s ease-out forwards;
+}
+
+@keyframes pinFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Select option hover */
+.mantine-Select-option:hover {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+}
+
+/* Selected option */
+.mantine-Select-option[data-selected="true"] {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+}
+
+/* Keyboard / active highlight */
+.mantine-Select-option[data-active="true"] {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+}
+
+.attendance-page .mantine-Tabs-list,
+.promises-page .mantine-Tabs-list,
+.schedule-page .mantine-Tabs-list,
+.procurement-page .mantine-Tabs-list,
+.distribution-page .mantine-Tabs-list {
+  border-bottom: none !important;
+}
+
+.attendance-page .mantine-Tabs-list.border-b,
+.promises-page .mantine-Tabs-list.border-b,
+.schedule-page .mantine-Tabs-list.border-b {
+  border-bottom: none !important;
+}
+
+
+.attendance-page .mantine-Tabs-list::before {
+  display: none !important;
+  border: none !important;
+  content: none !important;
+}
+
+/* --------------------------------------------------
+   CUSTOM SCROLLBAR STYLING
+--------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}

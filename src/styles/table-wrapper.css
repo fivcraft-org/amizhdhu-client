@@ -1,0 +1,42 @@
+.table-sticky {
+  position: sticky;
+  background: white;
+  z-index: 20;
+}
+
+.table-sticky--header {
+  top: 0;
+  z-index: 30;
+}
+
+.table-sticky--cell {
+  z-index: 15;
+}
+
+.table-sticky--first-data {
+  left: 60px !important;
+}
+
+.table-sticky--second-data {
+  left: 180px !important;
+}
+
+.table-sticky--actions {
+  right: 0;
+  z-index: 25;
+}
+
+.top-scrollbar {
+  overflow-x: auto;
+  height: 12px;
+}
+
+.top-scrollbar-content {
+  height: 1px;
+}
+
+.table-wrapper-card {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+}

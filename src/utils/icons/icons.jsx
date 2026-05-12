@@ -1,0 +1,53 @@
+import { FaEye, FaKey } from "react-icons/fa";
+import { Loader } from "@mantine/core";
+import {
+    IconPencil,
+    IconTrashX,
+    IconRocket,
+    IconRestore,
+    IconBan,
+    IconCircleCheck,
+    IconCircleMinus,
+    IconLock,
+    IconCircleX,
+    IconX,
+    IconLogout,
+    IconTrash,
+    IconMailForward,
+    IconFileCheck,
+    IconEye,
+    IconMessage,
+    IconFlask,
+    IconClipboardCheck,
+    IconArchive,
+} from "@tabler/icons-react";
+
+export const ICONS = {
+    message: <IconMessage stroke={2} size={22} className="icon hover:text-blue-500" />,
+    edit: <IconPencil stroke={2} size={22} className="icon hover:text-indigo-500" />,
+    delete: <IconTrashX stroke={2} size={22} className="icon hover:text-rose-500" />,
+    view: <IconEye stroke={2} size={24} className="icon hover:text-blue-500" />,
+    reset: <FaKey size={20} className="icon hover:text-yellow-500" />,
+    deploy: <IconRocket stroke={2} size={22} className="icon hover:text-orange-500" />,
+    restore: <IconRestore stroke={2} size={22} className="icon hover:text-green-600" />,
+    active: <IconCircleCheck stroke={2} size={22} className="icon hover:text-lime-500" />,
+    inActive: <IconCircleMinus stroke={2} size={22} className="icon hover:text-amber-500" />,
+    ban: <IconBan stroke={2} size={22} className="icon hover:text-red-600" />,
+    cancel: <IconCircleX size={16} className="mr-1" />,
+    close: <IconX stroke={3} size={16} />,
+    lock: <IconLock size={16} />,
+    logout: <IconLogout size={16} className="mr-1" />,
+    confirmdelete: <IconTrash size={16} stroke={2} color="white" />,
+    email: <IconMailForward stroke={2} size={22} className="icon hover:text-indigo-500" />,
+    save: <IconFileCheck stroke={2} size={20} />,
+    test: <IconFlask stroke={2} size={22} className="icon hover:text-cyan-500" />,
+    clipboard: <IconClipboardCheck stroke={2} size={22} className="icon hover:text-teal-500" />,
+    container: <IconArchive stroke={2} size={22} className="icon hover:text-orange-500" />,
+    loader: <Loader size={20} color="white" />,
+    start: <IconRocket stroke={2} size={22} className="icon hover:text-green-500" />,
+    complete: <IconCircleCheck stroke={2} size={22} className="icon hover:text-blue-500" />,
+    check: <IconCircleCheck stroke={2} size={22} className="icon hover:text-teal-500" />,
+    reject: <IconCircleX stroke={2} size={22} className="icon hover:text-red-500" />,
+};
+
+

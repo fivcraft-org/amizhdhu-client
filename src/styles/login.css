@@ -1,0 +1,8 @@
+.bg-auth-gradient {
+  background: radial-gradient(
+      circle at bottom right,
+      rgba(7, 33, 60, 0.8) 0%,
+      rgba(7, 33, 60, 0.95) 50%,
+      rgb(4, 17, 31) 100%
+    );
+}
