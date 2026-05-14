@@ -743,7 +743,7 @@ export default function Navbar({ title = "Dashboard", setSidebarOpened }) {
                 className="flex items-center cursor-pointer border border-primary shadow rounded-full px-2 h-[45px] gap-2"
                 onClick={() => setProfileOpen(!profileOpen)}
               >
-                <Avatar src={Logo} radius="xl" size="md" className="border rounded-full" />
+                <Avatar src={user?.avatar || Logo} radius="xl" size="md" className="border rounded-full" />
 
                 {!isMobile && (
                   <>
@@ -761,7 +761,7 @@ export default function Navbar({ title = "Dashboard", setSidebarOpened }) {
             <Menu.Dropdown className="rounded-2xl! bg-white p-0 shadow-2xl overflow-hidden" radius="xl">
 
               <div className="p-4 border-b border-primary flex gap-4 items-center bg-main">
-                <Avatar src={Logo} size={56} radius="xl" className="border border-primary" />
+                <Avatar src={user?.avatar || Logo} size={56} radius="xl" className="border border-primary" />
 
                 <div>
                   <p className="font-semibold">{user?.name}</p>

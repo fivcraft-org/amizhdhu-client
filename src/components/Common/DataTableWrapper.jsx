@@ -174,7 +174,7 @@ const DataTableWrapper = ({
   );
 
   return (
-    <>
+    <div>
       {/* Sub Tabs */}
       {subTabs.length > 0 && (
         <Tabs
@@ -481,7 +481,7 @@ const DataTableWrapper = ({
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
