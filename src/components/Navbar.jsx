@@ -408,6 +408,13 @@ export default function Navbar({ title = "Dashboard", setSidebarOpened }) {
 
   return (
     <>
+      {profileOpen && (
+        <div 
+          className="fixed inset-0 bg-black/10 backdrop-blur-[3px] animate-in fade-in duration-200"
+          style={{ zIndex: 200 }}
+          onClick={() => setProfileOpen(false)}
+        />
+      )}
       <header
         className="
           h-[70px] sticky top-0 z-40 w-full bg-main border-b shadow-sm
@@ -730,13 +737,13 @@ export default function Navbar({ title = "Dashboard", setSidebarOpened }) {
           )}
 
           {/* PROFILE DROPDOWN */}
-          <Menu width={300} shadow="lg" opened={profileOpen} onChange={setProfileOpen}>
+          <Menu width={300} shadow="lg" opened={profileOpen} onChange={setProfileOpen} zIndex={300} position="bottom-end" offset={10}>
             <Menu.Target>
               <div
                 className="flex items-center cursor-pointer border border-primary shadow rounded-full px-2 h-[45px] gap-2"
                 onClick={() => setProfileOpen(!profileOpen)}
               >
-                <Avatar src={Logo} radius="xl" size="md" className="border rounded-full" />
+                <Avatar src={user?.avatar || Logo} radius="xl" size="md" className="border rounded-full" />
 
                 {!isMobile && (
                   <>
@@ -751,10 +758,10 @@ export default function Navbar({ title = "Dashboard", setSidebarOpened }) {
             </Menu.Target>
 
             {/* PROFILE MENU */}
-            <Menu.Dropdown className="rounded-xl bg-white p-0 shadow-xl">
+            <Menu.Dropdown className="rounded-2xl! bg-white p-0 shadow-2xl overflow-hidden" radius="xl">
 
-              <div className="p-4 border-b border-primary flex gap-3 items-center">
-                <Avatar src={Logo} size={48} radius="xl" className="border border-primary" />
+              <div className="p-4 border-b border-primary flex gap-4 items-center bg-main">
+                <Avatar src={user?.avatar || Logo} size={56} radius="xl" className="border border-primary" />
 
                 <div>
                   <p className="font-semibold">{user?.name}</p>
@@ -763,23 +770,23 @@ export default function Navbar({ title = "Dashboard", setSidebarOpened }) {
                   <p className="text-sm text-gray-500">{user?.email}</p>
                 </div>
               </div>
-              <div className="py-2">
+              <div className="p-2 space-y-1">
                 <Menu.Item
-                  leftSection={<Lock size={16} />}
-                  className="hover:bg-primary! hover:text-white! py-3!"
+                  leftSection={<Lock size={18} />}
+                  className="hover:bg-primary! hover:text-white! py-3! font-medium rounded-lg"
                   onClick={() => setResetPinModal(true)}
                 >
                   Reset PIN
                 </Menu.Item>
-              </div>
 
-              <Menu.Item
-                leftSection={<LogOut size={16} />}
-                className="hover:bg-red-500! hover:text-white! font-medium py-3!"
-                onClick={() => setLogoutModal(true)}
-              >
-                Logout
-              </Menu.Item>
+                <Menu.Item
+                  leftSection={<LogOut size={18} />}
+                  className="hover:bg-red-500! hover:text-white! font-medium py-3! rounded-lg"
+                  onClick={() => setLogoutModal(true)}
+                >
+                  Logout
+                </Menu.Item>
+              </div>
 
             </Menu.Dropdown>
           </Menu>
