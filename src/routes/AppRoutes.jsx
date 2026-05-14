@@ -93,7 +93,7 @@ export default function AppRoutes() {
         path={ROUTES.LOGIN}
         element={
           <PublicRoute>
-            <Login />
+            <LandingPage />
           </PublicRoute>
         }
       />

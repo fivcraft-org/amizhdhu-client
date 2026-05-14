@@ -17,10 +17,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*, *::before, *::after {
+  font-family: "Outfit", sans-serif !important;
+}
+
 /* --------------------------------------------------
    TAILWIND THEME TOKENS (auto-create utilities)
 --------------------------------------------------- */
 @theme {
+  --font-sans: "Outfit", sans-serif;
   --color-primary: #204A2A; /* Forest Green */
   --color-primary-light: #E8F5E9;
   
