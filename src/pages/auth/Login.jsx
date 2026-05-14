@@ -98,7 +98,7 @@ const Login = ({ skipAuthCheck }) => {
       <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-[#07213C]/50 rounded-full blur-3xl pointer-events-none" />
 
       {/* Main Centered Premium Theme Card Modeled Exactly After Screenshot */}
-      <div className="w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.8)] flex flex-col md:flex-row min-h-[520px] relative z-10 border border-white/10 my-auto modal-card-scale">
+      <div className="w-full max-w-3xl bg-white rounded-3xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.8)] flex flex-col md:flex-row min-h-[520px] relative z-10 border border-white/10 my-auto modal-card-scale">
         
         {/* COLUMN 1: The Nav Strip (Leftmost) */}
         <div className="w-full md:w-24 bg-[#07213C] flex md:flex-col items-center justify-between py-4 px-6 md:px-0 border-b md:border-b-0 md:border-r border-white/5 shrink-0">
@@ -160,7 +160,7 @@ const Login = ({ skipAuthCheck }) => {
         </div>
 
         {/* COLUMN 3: The Form Workspace (Rightmost Panel) */}
-        <div className="flex-1 bg-white p-8 sm:p-10 flex flex-col justify-center relative">
+        <div className="flex-1 bg-white p-6 sm:p-8 flex flex-col justify-center relative">
           {/* Top Right Router Exit Button */}
           <button
             onClick={() => navigationService("/")}

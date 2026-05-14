@@ -140,7 +140,7 @@
 
 @keyframes overlayFadeIn {
   from { background-color: rgba(0, 0, 0, 0); backdrop-filter: blur(0px); }
-  to { background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(12px); }
+  to { background-color: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); }
 }
 
 @keyframes cardScaleUp {
