@@ -92,13 +92,13 @@ const Login = ({ skipAuthCheck }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/80 backdrop-blur-md animate-fade-in font-sans overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 font-sans overflow-y-auto modal-overlay-fade">
       {/* Cinematic Ambient Glow Backdrops */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#769642]/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-[#07213C]/50 rounded-full blur-3xl pointer-events-none" />
 
       {/* Main Centered Premium Theme Card Modeled Exactly After Screenshot */}
-      <div className="w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.8)] flex flex-col md:flex-row min-h-[520px] relative z-10 border border-white/10 my-auto animate-scale-up">
+      <div className="w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.8)] flex flex-col md:flex-row min-h-[520px] relative z-10 border border-white/10 my-auto modal-card-scale">
         
         {/* COLUMN 1: The Nav Strip (Leftmost) */}
         <div className="w-full md:w-24 bg-[#07213C] flex md:flex-col items-center justify-between py-4 px-6 md:px-0 border-b md:border-b-0 md:border-r border-white/5 shrink-0">
