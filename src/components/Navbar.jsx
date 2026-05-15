@@ -31,7 +31,7 @@ import {
   apiGetCurrentAttendance 
 } from "../api/attendance";
 import { notifySuccess, notifyError } from "../utils/services/toast/toast-service";
-import ConfirmModal from "./common/ConfirmModal";
+import ConfirmModal from "./Common/ConfirmModal";
 import { updatePinApi, requestPinReset } from "../api/auth/auth";
 import { PinInput, Stack, Group, Button as MantineButton, ActionIcon } from "@mantine/core";
 

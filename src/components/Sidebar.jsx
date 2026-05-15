@@ -24,7 +24,7 @@ import { notifySuccess } from "../utils/services/toast/toast-service";
 import { logoutApi } from "../api/auth/auth";
 import useAuth from "../hooks/useAuth";
 import { navigationService } from "../hooks/useNavigationService";
-import ConfirmModal from "./common/ConfirmModal";
+import ConfirmModal from "./Common/ConfirmModal";
 
 const GROUP_ICONS = {
   "HR Management": Users,
