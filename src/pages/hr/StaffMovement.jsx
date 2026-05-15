@@ -54,9 +54,9 @@ import {
 } from "@tabler/icons-react";
 import { Loader2 } from "lucide-react";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
-import StatusBadge from "../../components/common/StatusBadge";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
 
 import api from "../../api/axios";
 import { 

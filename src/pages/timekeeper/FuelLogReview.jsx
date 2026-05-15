@@ -3,10 +3,10 @@ import { TextInput, Select, NumberInput, Modal, Button, Stack, Paper, Group, Tex
 import { DateInput } from "@mantine/dates";
 import { IconCalendar, IconX } from "@tabler/icons-react";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
-import StatusBadge from "../../components/common/StatusBadge";
-import FormModal from "../../components/common/FormModal";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
+import FormModal from "../../components/Common/FormModal";
 import logisticApi from "../../api/logistic";
 import { formatDate } from "../../utils/helper/date-formatter";
 

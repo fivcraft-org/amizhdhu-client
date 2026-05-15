@@ -1,5 +1,5 @@
 import React from 'react';
-import StatusBadge from "../../components/common/StatusBadge";
+import StatusBadge from "../../components/Common/StatusBadge";
 import { formatDate, formatDateTime, formatTime } from "../helper/date-formatter";
 
 export const microbiologistTestingsConfig = {

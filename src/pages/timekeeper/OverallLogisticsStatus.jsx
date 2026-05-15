@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Stack, Title, Grid, Paper, Text, Group, Badge, Tabs } from "@mantine/core";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
 import logisticApi from "../../api/logistic";
-import StatusBadge from "../../components/common/StatusBadge";
+import StatusBadge from "../../components/Common/StatusBadge";
 import StatsCards from "../../components/StatsCards";
-import ResourceStatusCard from "../../components/common/ResourceStatusCard";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import ResourceStatusCard from "../../components/Common/ResourceStatusCard";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import totalDriversIcon from "../../assets/icons/drivers-icon.png";
 import totalVehiclesIcon from "../../assets/icons/vehicles-icon.png";
 import collectionCenterIcon from "../../assets/icons/collection-center-icon.png";

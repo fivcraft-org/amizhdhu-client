@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
-import StatusBadge from "../../components/common/StatusBadge";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
 import { Modal, Stack, TextInput, Button, Group, Title } from "@mantine/core";
 import { notifySuccess, notifyError } from "../../utils/services/toast/toast-service";
 import logisticApi from "../../api/logistic";

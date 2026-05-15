@@ -1,12 +1,12 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
 import { microbiologistTestingsConfig } from "../../utils/table-columns/microbiologist-testings";
-import StatusBadge from "../../components/common/StatusBadge";
-import FilterBar from "../../components/common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
+import FilterBar from "../../components/Common/FilterBar";
 import { apiGetDeliveries, apiGetTestLogs, apiUpdateDeliveryStatus, apiCreateQualityTest, apiGetDashboard, apiDownloadTestings, apiClaimTrip } from "../../api/microbiologist";
 import logisticApi from "../../api/logistic";
-import DownloadCSVButton from "../../components/common/DownloadCSVButton";
-import ConfirmModal from "../../components/common/ConfirmModal";
+import DownloadCSVButton from "../../components/Common/DownloadCSVButton";
+import ConfirmModal from "../../components/Common/ConfirmModal";
 import { FlaskConical, ClipboardCheck, Upload, X, Check, Eye, Image as ImageIcon } from "lucide-react";
 import { notifySuccess, notifyError, notifyWarning } from "../../utils/services/toast/toast-service";
 import { Modal, Button, Group, TextInput, NumberInput, Textarea, Select, FileButton, Text, SimpleGrid, Grid, Paper, Stack, Drawer, Badge, Divider, ThemeIcon, Box } from "@mantine/core";
@@ -16,7 +16,7 @@ import totalBatchesIcon from "../../assets/icons/total-batches-icon.png";
 import pendingIcon from "../../assets/icons/pending-batches-icon.png";
 import approvedIcon from "../../assets/icons/approved-batches-icon.png";
 import rejectedIcon from "../../assets/icons/rejected-batches-icon.png";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import { formatDate, formatTime } from "../../utils/helper/date-formatter";
 import { validateMilkQuality, MILK_QUALITY_STANDARDS } from "../../utils/validators/milk-quality-validator";
 

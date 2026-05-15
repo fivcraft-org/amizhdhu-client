@@ -4,9 +4,9 @@ import { Stack, Group, Text, SimpleGrid, Card, Tabs, Badge, Paper, ActionIcon, T
 import { Box, Milk, Package, Info, RefreshCw } from "lucide-react";
 import ROUTES from "../../utils/routes/routes";
 import { apiGetStorageOverview } from "../../api/storage-packaging";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
 
 // Icons
 import totalStorageIcon from "../../assets/icons/total-storage-icon.png";

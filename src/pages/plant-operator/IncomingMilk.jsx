@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
 import { incomingMilkConfig } from "../../utils/table-columns/incoming-milk-columns";
 import {
   getIncomingMilk,
   downloadIncomingMilk,
 } from "../../api/plant-operator";
-import StatusBadge from "../../components/common/StatusBadge";
-import DownloadCSVButton from "../../components/common/DownloadCSVButton";
+import StatusBadge from "../../components/Common/StatusBadge";
+import DownloadCSVButton from "../../components/Common/DownloadCSVButton";
 import { formatDateTime } from "../../utils/helper/date-formatter";
 import { FlaskConical, Eye, Image as ImageIcon, Check, X } from "lucide-react";
 import {

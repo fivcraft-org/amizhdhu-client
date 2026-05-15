@@ -33,10 +33,10 @@ import {
   IconCalendar
 } from "@tabler/icons-react";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
-import StatusBadge from "../../components/common/StatusBadge";
-import DownloadCSVButton from "../../components/common/DownloadCSVButton";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
+import DownloadCSVButton from "../../components/Common/DownloadCSVButton";
 
 import totalCertIcon from "../../assets/icons/total-logs-today-icon.png";
 import expiringIcon from "../../assets/icons/alert-icon.png";

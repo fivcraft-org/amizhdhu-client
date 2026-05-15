@@ -3,16 +3,16 @@ import { Stack, Tabs, Button, Group, Text, TextInput, Divider, Grid, Paper, Tool
 import { IconCheck, IconAlertTriangle, IconRefresh, IconEye } from "@tabler/icons-react";
 import { notifications } from "@mantine/notifications";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import StatusBadge from "../../components/common/StatusBadge";
-import FilterBar from "../../components/common/FilterBar";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import StatusBadge from "../../components/Common/StatusBadge";
+import FilterBar from "../../components/Common/FilterBar";
 
 // Icons
 import totalHubRequestsIcon from "../../assets/icons/total-hub-request-icon.png";
 import pendingIcon from "../../assets/icons/pending-batches-icon.png";
 import approvedIcon from "../../assets/icons/approved-request-icon.png";
 import rejectedIcon from "../../assets/icons/rejected-request-icon.png";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import { getHubRequests, reviewHubRequest, apiGetStorageOverview } from "../../api/storage-packaging";
 import { formatDate } from "../../utils/helper/date-formatter";
 

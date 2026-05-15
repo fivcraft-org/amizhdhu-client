@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "../../utils/routes/routes";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
 import { Grid, Stack, Table, Button, Paper, Text, Badge, Group } from "@mantine/core";
 import { Package, Truck, Warehouse } from "lucide-react";
 import totalBatchesIcon from "../../assets/icons/ready-batches-icon.png";
@@ -11,7 +11,7 @@ import hubRequestsIcon from "../../assets/icons/total-hub-request-icon.png";
 import storageUsedIcon from "../../assets/icons/storage-used-icon.png";
 import inPackagingIcon from "../../assets/icons/in-packaging-icon.png";
 import { apiGetStorageOverview } from "../../api/storage-packaging";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import { formatDate, formatTime } from "../../utils/helper/date-formatter";
 
 export default function StorageDashboard() {

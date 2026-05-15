@@ -5,7 +5,7 @@ import StatsCards from '../../components/StatsCards';
 import useAuth from '../../hooks/useAuth';
 import { notifications } from '@mantine/notifications';
 import { getSuperAdminDashboard } from '../../api/super-admin';
-import FullPageLoader from '../../components/common/FullPageLoader';
+import FullPageLoader from '../../components/Common/FullPageLoader';
 
 // Icons for stats cards (placeholders)
 import totalVolIcon from "../../assets/icons/total-volume-icon.png";

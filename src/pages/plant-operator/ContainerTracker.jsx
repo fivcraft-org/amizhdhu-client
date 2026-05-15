@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
-import StatusBadge from "../../components/common/StatusBadge";
-import DownloadCSVButton from "../../components/common/DownloadCSVButton";
-import FormModal from "../../components/common/FormModal";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
+import DownloadCSVButton from "../../components/Common/DownloadCSVButton";
+import FormModal from "../../components/Common/FormModal";
 import {
   TextInput,
   Stack,

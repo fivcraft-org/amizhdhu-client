@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import { Progress, Stack, Title } from "@mantine/core";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
-import StatusBadge from "../../components/common/StatusBadge";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
 import { formatDate } from "../../utils/helper/date-formatter";
 
 import totalTripsIcon from "../../assets/icons/today-schedule-icon.png";

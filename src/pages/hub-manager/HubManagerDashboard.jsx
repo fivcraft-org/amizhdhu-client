@@ -17,9 +17,9 @@ import {
 import { useNavigate } from 'react-router-dom';
 import StatsCards from '../../components/StatsCards';
 import { getInventoryRequests } from '../../api/hub-manager';
-import FullPageLoader from '../../components/common/FullPageLoader';
-import StatusBadge from '../../components/common/StatusBadge';
-import DataTableWrapper from '../../components/common/DataTableWrapper';
+import FullPageLoader from '../../components/Common/FullPageLoader';
+import StatusBadge from '../../components/Common/StatusBadge';
+import DataTableWrapper from '../../components/Common/DataTableWrapper';
 import ROUTES from '../../utils/routes/routes';
 import useAuth from '../../hooks/useAuth';
 

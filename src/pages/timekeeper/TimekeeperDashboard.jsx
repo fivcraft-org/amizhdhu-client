@@ -13,10 +13,10 @@ import { useNavigate } from "react-router-dom";
 import logisticApi from "../../api/logistic";
 import ROUTES from "../../utils/routes/routes";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import StatusBadge from "../../components/common/StatusBadge";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import StatusBadge from "../../components/Common/StatusBadge";
 
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import { formatDate } from "../../utils/helper/date-formatter";
 import totalTripsIcon from "../../assets/icons/today-schedule-icon.png";
 import ongoingIcon from "../../assets/icons/ongoing-trip-icon.png";

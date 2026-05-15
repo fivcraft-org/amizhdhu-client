@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { getReports, downloadProcessLog } from "../../api/plant-operator";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
 import { Stack, Text, Box, Modal, Paper, SimpleGrid, Badge, Group, Button } from "@mantine/core";
-import DownloadCSVButton from "../../components/common/DownloadCSVButton";
-import FullPageLoader from "../../components/common/FullPageLoader";
-import StatusBadge from "../../components/common/StatusBadge";
+import DownloadCSVButton from "../../components/Common/DownloadCSVButton";
+import FullPageLoader from "../../components/Common/FullPageLoader";
+import StatusBadge from "../../components/Common/StatusBadge";
 import { formatTime } from "../../utils/helper/date-formatter";
 import { IconSun, IconFlame, IconSnowflake } from "@tabler/icons-react";
 import StatsCards from "../../components/StatsCards";

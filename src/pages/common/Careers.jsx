@@ -24,8 +24,8 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconBriefcase, IconMapPin, IconClock, IconSend, IconChevronRight, IconFileText } from "@tabler/icons-react";
 import api from "../../api/axios";
 import { notifySuccess, notifyError } from "../../utils/services/toast/toast-service";
-import PublicNavbar from "../../components/common/PublicNavbar";
-import PublicFooter from "../../components/common/PublicFooter";
+import PublicNavbar from "../../components/Common/PublicNavbar";
+import PublicFooter from "../../components/Common/PublicFooter";
 
 // API_BASE is handled by the centralized api instance in src/api/axios.js
 

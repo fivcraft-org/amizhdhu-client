@@ -1,7 +1,7 @@
 import useAuth from "../../hooks/useAuth";
 import MicrobiologistCertifications from "../microbiologist/MicrobiologistCertifications";
 import HrCertifications from "../hr/HrCertifications";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 
 const Certification = () => {
   const { user, loading } = useAuth();

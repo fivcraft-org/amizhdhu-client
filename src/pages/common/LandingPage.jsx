@@ -34,9 +34,9 @@ import {
   Star
 } from "lucide-react";
 import ROUTES from "../../utils/routes/routes";
-import PublicNavbar from "../../components/common/PublicNavbar";
-import PublicFooter from "../../components/common/PublicFooter";
-import ImageSequenceScroll from "../../components/common/ImageSequenceScroll";
+import PublicNavbar from "../../components/Common/PublicNavbar";
+import PublicFooter from "../../components/Common/PublicFooter";
+import ImageSequenceScroll from "../../components/Common/ImageSequenceScroll";
 
 const LandingPage = () => {
   const navigate = useNavigate();

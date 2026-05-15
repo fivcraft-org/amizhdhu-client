@@ -8,11 +8,11 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
 import StatsCards from "../../components/StatsCards";
-import FilterBar from "../../components/common/FilterBar";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import StatusBadge from "../../components/common/StatusBadge";
-import FormModal from "../../components/common/FormModal";
-import CustomTimePicker from "../../components/common/CustomTimePicker";
+import FilterBar from "../../components/Common/FilterBar";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import StatusBadge from "../../components/Common/StatusBadge";
+import FormModal from "../../components/Common/FormModal";
+import CustomTimePicker from "../../components/Common/CustomTimePicker";
 
 // API
 import { recordMaintenance, getReports, getContainers, downloadMaintenanceReport } from "../../api/plant-operator";

@@ -1,18 +1,18 @@
 import { useState, useEffect, useMemo, useCallback } from "react";
 import { formatDate } from "../../utils/helper/date-formatter";
 import { Navigate, useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
 import { employeeManagement } from "../../utils/table-columns/employee-management";
-import StatusBadge from "../../components/common/StatusBadge";
-import FormModal from "../../components/common/FormModal";
+import StatusBadge from "../../components/Common/StatusBadge";
+import FormModal from "../../components/Common/FormModal";
 import { TextInput, Stack, Select, Textarea, Tooltip } from "@mantine/core";
-import DownloadCSVButton from "../../components/common/DownloadCSVButton";
-import ConfirmModal from "../../components/common/ConfirmModal";
+import DownloadCSVButton from "../../components/Common/DownloadCSVButton";
+import ConfirmModal from "../../components/Common/ConfirmModal";
 import { notifySuccess, notifyError } from "../../utils/services/toast/toast-service";
 import PhoneInput from "../../components/Common/PhoneInput";
 import useAuth from "../../hooks/useAuth";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 
 import {
   apiGetEmployees,
@@ -32,7 +32,7 @@ import {
   apiGenerateEmployeeId
 } from "../../api/employee";
 import { employeeSchema } from "../../utils/validators/employee-validator";
-import DateBy from "../../components/common/DateBy";
+import DateBy from "../../components/Common/DateBy";
 import { truncateText } from "../../utils/helper/truncate-text";
 
 const STATUS_MAP = {

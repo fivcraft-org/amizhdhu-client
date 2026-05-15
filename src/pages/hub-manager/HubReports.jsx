@@ -1,9 +1,9 @@
 import React, { useState, useMemo, useEffect, useContext, useCallback } from 'react';
 import { formatDate } from '../../utils/helper/date-formatter';
 import { Stack, Text, Modal, Grid, Button, Group, Divider, Tooltip, Paper, Badge } from '@mantine/core';
-import DataTableWrapper from '../../components/common/DataTableWrapper';
-import StatusBadge from '../../components/common/StatusBadge';
-import FilterBar from '../../components/common/FilterBar';
+import DataTableWrapper from '../../components/Common/DataTableWrapper';
+import StatusBadge from '../../components/Common/StatusBadge';
+import FilterBar from '../../components/Common/FilterBar';
 import { requestInventoryConfig } from '../../utils/table-columns/request-inventory-columns';
 import StatsCards from '../../components/StatsCards';
 import AuthContext from '../../context/AuthContext';

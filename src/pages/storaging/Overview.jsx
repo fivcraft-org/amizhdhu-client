@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { LayoutList } from "lucide-react";
 import ROUTES from "../../utils/routes/routes";
 
-import FilterBar from "../../components/common/FilterBar";
+import FilterBar from "../../components/Common/FilterBar";
 import { overviewConfig } from "../../utils/table-columns/overview-columns";
 import StatsCards from "../../components/StatsCards";
 import { apiGetStorageOverview, apiGetStorageReports } from "../../api/storage-packaging";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 
 // Icons
 import totalStorageIcon from "../../assets/icons/total-storage-icon.png";

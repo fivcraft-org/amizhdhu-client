@@ -7,10 +7,10 @@ startHeating,
   getProcessLog,
   transitionUvcToHeating,
 } from "../../api/plant-operator";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
 import { processLogConfig } from "../../utils/table-columns/process-log-columns";
-import StatusBadge from "../../components/common/StatusBadge";
-import FormModal from "../../components/common/FormModal";
+import StatusBadge from "../../components/Common/StatusBadge";
+import FormModal from "../../components/Common/FormModal";
 import {
   Card,
   Text,
@@ -42,7 +42,7 @@ import {
 import { useRef } from "react";
 import { TimeInput } from "@mantine/dates";
 
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import StatsCards from "../../components/StatsCards";
 import { formatTime } from "../../utils/helper/date-formatter";
 

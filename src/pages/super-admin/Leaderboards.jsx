@@ -2,8 +2,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Stack, Text, Group, Badge, Avatar } from '@mantine/core';
 import { IconDroplet, IconUser, IconTrophy, IconMedal } from '@tabler/icons-react';
 import { apiGetLeaderboards } from '../../api/super-admin';
-import FullPageLoader from '../../components/common/FullPageLoader';
-import DataTableWrapper from '../../components/common/DataTableWrapper';
+import FullPageLoader from '../../components/Common/FullPageLoader';
+import DataTableWrapper from '../../components/Common/DataTableWrapper';
 import StatsCards from '../../components/StatsCards';
 
 // Icons

@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from "react";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
-import DownloadCSVButton from "../../components/common/DownloadCSVButton";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
+import DownloadCSVButton from "../../components/Common/DownloadCSVButton";
 
 import totalEmployeeIcon from "../../assets/icons/total-employee.png";
 import grossSalaryIcon from "../../assets/icons/gross-salary-icon.png";

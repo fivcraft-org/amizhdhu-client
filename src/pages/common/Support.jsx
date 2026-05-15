@@ -1,6 +1,6 @@
 import useAuth from "../../hooks/useAuth";
 import MicrobiologistSupport from "../microbiologist/MicrobiologistSupport";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 
 export default function Support() {
     const { user, loading } = useAuth();

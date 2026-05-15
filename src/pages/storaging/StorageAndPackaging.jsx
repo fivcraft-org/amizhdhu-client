@@ -4,10 +4,10 @@ import { Stack, Text, Paper, Group, Grid, NumberInput, ActionIcon, Select, Butto
 import { notifications } from "@mantine/notifications";
 import { Archive, Play, Pause, AlertCircle, Plus, Trash, Clock } from "lucide-react";
 import { TimeInput } from "@mantine/dates";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
 import { storageAndPackagingConfig } from "../../utils/table-columns/storage-and-packaging-columns";
-import FilterBar from "../../components/common/FilterBar";
-import StatusBadge from "../../components/common/StatusBadge";
+import FilterBar from "../../components/Common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
 import StatsCards from "../../components/StatsCards";
 import {
     apiStartPackaging,
@@ -27,7 +27,7 @@ import {
 import storageUsedIcon from "../../assets/icons/total-storage-icon.png";
 import usedStorageIcon from "../../assets/icons/used-storage-icon.png";
 import remainingStorageIcon from "../../assets/icons/remaining-capacity-icon.png";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import totalPacketsIcon from "../../assets/icons/total-packets-icon.png";
 import pendingPacketsIcon from "../../assets/icons/in-packaging-icon.png";
 import { formatDate, formatDateTime, formatTime } from "../../utils/helper/date-formatter";

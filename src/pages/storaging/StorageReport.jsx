@@ -2,12 +2,12 @@ import { useState, useMemo, useEffect } from "react";
 import { Stack, Tabs, Badge, Group, Text, ActionIcon, Modal, Grid, Divider, Button } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 import { Eye, Printer } from "lucide-react";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
 import StatsCards from "../../components/StatsCards";
-import StatusBadge from "../../components/common/StatusBadge";
+import StatusBadge from "../../components/Common/StatusBadge";
 import { apiGetStorageReports, apiGetStorageOverview, apiDownloadStorageReports } from "../../api/storage-packaging";
-import DownloadCSVButton from "../../components/common/DownloadCSVButton";
+import DownloadCSVButton from "../../components/Common/DownloadCSVButton";
 
 // Configs
 import { storageAndPackagingConfig } from "../../utils/table-columns/storage-and-packaging-columns";
@@ -17,7 +17,7 @@ import { overviewConfig } from "../../utils/table-columns/overview-columns";
 import totalRequestsIcon from "../../assets/icons/total-requests-icons.png";
 import todayPackagingIcon from "../../assets/icons/today-packaging-icon.png";
 import activeStorageIcon from "../../assets/icons/active-storage-icon.png";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 
 
 export default function StorageReport() {

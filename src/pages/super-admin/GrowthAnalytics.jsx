@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Stack, Title, Text, Group, Paper, Grid, SimpleGrid, RingProgress, Center, Badge } from '@mantine/core';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, AreaChart, Area, BarChart, Bar, Legend } from 'recharts';
 import { apiGetGrowthAnalytics } from '../../api/super-admin';
-import FullPageLoader from '../../components/common/FullPageLoader';
+import FullPageLoader from '../../components/Common/FullPageLoader';
 import StatsCards from '../../components/StatsCards';
 
 // Import icons as images
