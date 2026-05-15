@@ -9,9 +9,9 @@ import {
 } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import StatusBadge from "../../components/common/StatusBadge";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import StatusBadge from "../../components/Common/StatusBadge";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 
 import totalBatchesIcon from "../../assets/icons/total-batches-icon.png";
 import approvedMilkIcon from "../../assets/icons/approved-milk-icon.png";

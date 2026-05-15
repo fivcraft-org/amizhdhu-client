@@ -2,7 +2,7 @@ import { Navigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import ROUTES from "../utils/routes/routes";
 
-import FullPageLoader from "../components/common/FullPageLoader";
+import FullPageLoader from "../components/Common/FullPageLoader";
 
 export default function RequireAuth({ children }) {
   const { user, loading } = useAuth();

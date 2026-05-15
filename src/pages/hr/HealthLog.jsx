@@ -17,10 +17,10 @@ import {
 import { LineChart } from "@mantine/charts";
 import { IconAlertTriangle, IconCheck, IconChevronRight, IconActivity } from "@tabler/icons-react";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
-import StatusBadge from "../../components/common/StatusBadge";
-import DownloadCSVButton from "../../components/common/DownloadCSVButton";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
+import DownloadCSVButton from "../../components/Common/DownloadCSVButton";
 
 import totalLogsIcon from "../../assets/icons/total-logs-today-icon.png";
 import clearedIcon from "../../assets/icons/cleared-icon.png";

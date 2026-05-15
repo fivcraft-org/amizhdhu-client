@@ -23,11 +23,15 @@ const PublicNavbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
+            // Keep transparent during the full 400vh landing page cinematic scroll animation
+            const threshold = location.pathname === "/" ? window.innerHeight * 3 : 20;
+            setScrolled(window.scrollY > threshold);
         };
         window.addEventListener("scroll", handleScroll);
+        // Trigger initial calculation
+        handleScroll();
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [location.pathname]);
 
     const isLanding = location.pathname === "/";
 

@@ -1,5 +1,5 @@
 import useAuth from "../../hooks/useAuth";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import TimekeeperIssueManagement from "../timekeeper/TimekeeperIssueManagement";
 import StorageIssueManagement from "../storaging/IssueManagement";
 

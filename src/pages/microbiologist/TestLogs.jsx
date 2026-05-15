@@ -1,15 +1,15 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
 import { microbiologistTestLogsConfig } from "../../utils/table-columns/microbiologist-test-logs";
-import StatusBadge from "../../components/common/StatusBadge";
-import FilterBar from "../../components/common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
+import FilterBar from "../../components/Common/FilterBar";
 import { apiGetTestLogs, apiDownloadTestings } from "../../api/microbiologist";
-import DownloadCSVButton from "../../components/common/DownloadCSVButton";
+import DownloadCSVButton from "../../components/Common/DownloadCSVButton";
 import StatsCards from "../../components/StatsCards";
 import totalLogsIcon from "../../assets/icons/total-logs-icon.png";
 import approvedLogsIcon from "../../assets/icons/approved-logs-icon.png";
 import rejectedLogsIcon from "../../assets/icons/rejected-logs-icon.png";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import { formatDate, formatDateTime, formatTime } from "../../utils/helper/date-formatter";
 
 import { Modal, Paper, Text, Stack, Group, Divider, Badge, SimpleGrid, Grid, Drawer, Box, ThemeIcon, Button } from "@mantine/core";

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import Login from "../auth/Login";
 import {
   Container,
   Title,
@@ -33,11 +34,13 @@ import {
   Star
 } from "lucide-react";
 import ROUTES from "../../utils/routes/routes";
-import PublicNavbar from "../../components/common/PublicNavbar";
-import PublicFooter from "../../components/common/PublicFooter";
+import PublicNavbar from "../../components/Common/PublicNavbar";
+import PublicFooter from "../../components/Common/PublicFooter";
+import ImageSequenceScroll from "../../components/Common/ImageSequenceScroll";
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const theme = useMantineTheme();
   const [activeTab, setActiveTab] = useState(0);
 
@@ -106,71 +109,14 @@ const LandingPage = () => {
   ];
 
   return (
-    <Box className="min-h-screen bg-[#FAFAFA] font-outfit overflow-x-hidden selection:bg-[#769642] selection:text-white">
+    <Box className="min-h-screen bg-[#FAFAFA] font-outfit selection:bg-[#769642] selection:text-white">
       <PublicNavbar />
 
-      {/* ─── HERO SECTION ─── */}
-      <Box className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden">
-        {/* Visual Background Blend */}
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transform scale-105 brightness-75"
-          style={{ backgroundImage: "url('/hero-bg.png')" }}
-        />
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#07213C]/95 via-[#07213C]/80 to-[#204A2A]/70 backdrop-blur-[2px]" />
-
-        {/* Ambient Light Circles */}
-        <div className="absolute top-1/4 -left-24 w-96 h-96 bg-[#769642]/20 rounded-full blur-[120px] z-0" />
-        <div className="absolute bottom-1/4 -right-24 w-96 h-96 bg-[#07213C]/40 rounded-full blur-[120px] z-0" />
-
-        <Container size="lg" className="relative z-10 px-6 py-16 sm:py-20 flex flex-col items-center text-center mt-12">
-          
-          {/* Upper Badge */}
-          <Box className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-xs mb-6 tracking-wider animate-fadeInUp">
-            <Star size={14} className="text-[#769642] fill-[#769642]" />
-            <span className="uppercase">Next-Gen Dairy Ecosystem</span>
-          </Box>
-
-          {/* Dramatic Typography */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight tracking-tight animate-fadeInUp drop-shadow-sm">
-            Redefining Dairy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A6C573] to-[#E1F3C2]">Supply Chains</span>
-          </h1>
-
-          {/* Controlled Text */}
-          <Text className="!text-white text-sm md:text-base max-w-xl mx-auto mb-12 font-medium leading-relaxed animate-fadeInUp px-4 opacity-90">
-            Amizhdhu harmonizes production, intelligent logistics, and 360° processing oversight into a singular, flawless intelligence grid.
-          </Text>
-
-          {/* Premium Action Container */}
-          <Group justify="center" gap="md" className="animate-fadeInUp w-full max-w-lg mx-auto flex-col sm:flex-row mt-4">
-            <Button
-              size="md"
-              radius="xl"
-              style={{ backgroundColor: '#769642' }}
-              className="h-11 md:h-12 px-6 md:px-8 hover:bg-[#5f7a35] text-white shadow-xl shadow-[#769642]/20 transition-transform hover:scale-[1.02] border-none w-full sm:w-auto text-sm font-bold"
-              rightSection={<ChevronRight size={18} />}
-              onClick={() => navigate(ROUTES.LOGIN)}
-            >
-              Access Console
-            </Button>
-            
-            <Button
-              size="md"
-              variant="outline"
-              radius="xl"
-              className="h-11 md:h-12 px-6 md:px-8 border-white/40 bg-white/5 backdrop-blur-sm !text-white hover:bg-white/10 transition-all w-full sm:w-auto text-sm font-bold"
-              onClick={() => document.getElementById('features-grid')?.scrollIntoView({behavior:'smooth'})}
-            >
-              Our Framework
-            </Button>
-          </Group>
-        </Container>
-
-        {/* Elegant Bottom Curve */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#FAFAFA] to-transparent z-10" />
-      </Box>
+      {/* ─── HERO CINEMATIC SCROLL ANIMATION ─── */}
+      <ImageSequenceScroll />
 
       {/* ─── METRICS STRIP ─── */}
-      <Box className="relative z-20 -mt-12 mb-16 px-4">
+      <Box className="relative z-20 mb-16 px-4">
         <Container size="lg">
           <Paper radius="2xl" className="p-1 bg-gradient-to-r from-[#07213C]/5 via-white/80 to-[#07213C]/5 backdrop-blur shadow-2xl">
             <div className="bg-white rounded-[20px] py-10 px-6 md:px-12 border border-gray-100">
@@ -189,6 +135,7 @@ const LandingPage = () => {
           </Paper>
         </Container>
       </Box>
+
 
       {/* ─── LOGISTICS PIPELINE ─── */}
       <Box className="py-24 bg-[#FAFAFA]">
@@ -369,6 +316,9 @@ const LandingPage = () => {
       </Box>
 
       <PublicFooter />
+
+      {/* Embedded Fullscreen Sign In Overlay Modal triggered on /login route */}
+      {location.pathname === "/login" && <Login />}
     </Box>
   );
 };

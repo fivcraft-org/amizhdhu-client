@@ -30,7 +30,7 @@ import totalPhotosIcon from "../../assets/icons/po-total-uvc-icon.png";
 import syncedPhotosIcon from "../../assets/icons/Final-Approval-icon.png";
 import pendingPhotosIcon from "../../assets/icons/pending-reports-icon.png";
 
-import ConfirmModal from "../../components/common/ConfirmModal";
+import ConfirmModal from "../../components/Common/ConfirmModal";
 
 export default function OperationalPhotos() {
     const [photos, setPhotos] = useState([]);

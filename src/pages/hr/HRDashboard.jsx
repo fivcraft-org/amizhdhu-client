@@ -20,9 +20,9 @@ import {
 import ROUTES from "../../utils/routes/routes";
 import { apiGetEmployeeCounts, apiGetEmployees } from "../../api/employee";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import StatusBadge from "../../components/common/StatusBadge";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import StatusBadge from "../../components/Common/StatusBadge";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import totalEmployeeIcon from "../../assets/icons/total-employee-icon.png";
 import activeEmployeeIcon from "../../assets/icons/total-employee.png";
 import inactiveEmployeeIcon from "../../assets/icons/total-inactive-employee-icon.png";

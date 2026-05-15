@@ -12,12 +12,12 @@ import {
 import { 
   IconDownload, 
 } from "@tabler/icons-react";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import StatusBadge from "../../components/common/StatusBadge";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import StatusBadge from "../../components/Common/StatusBadge";
 import totalPresentIcon from "../../assets/icons/total-present-icon.png";
 import absentIcon from "../../assets/icons/absent-icon.png";
 import outOfTimeIcon from "../../assets/icons/out-of-time-icon.png";
-import FilterBar from "../../components/common/FilterBar";
+import FilterBar from "../../components/Common/FilterBar";
 import { normalizeAttendanceSummary } from "../../utils/helper/attendance-summary";
 
 import { useAttendance } from "../../context/AttendanceContext";

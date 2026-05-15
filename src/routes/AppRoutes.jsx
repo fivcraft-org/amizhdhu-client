@@ -12,7 +12,7 @@ import CreatePin from "../pages/auth/CreatePin";
 import LandingPage from "../pages/common/LandingPage";
 import Careers from "../pages/common/Careers";
 
-import AppLayout from "../components/layouts/AppLayout";
+import AppLayout from "../components/Layouts/AppLayout";
 import Dashboard from "../pages/common/Dashboard.jsx";
 import IncomingMilk from "../pages/plant-operator/IncomingMilk";
 import TestStatus from "../pages/plant-operator/TestStatus";
@@ -93,7 +93,7 @@ export default function AppRoutes() {
         path={ROUTES.LOGIN}
         element={
           <PublicRoute>
-            <Login />
+            <LandingPage />
           </PublicRoute>
         }
       />

@@ -10,9 +10,9 @@ import {
   ActionIcon,
   SimpleGrid
 } from "@mantine/core";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
-import StatusBadge from "../../components/common/StatusBadge";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
 import { employeeAttendance } from "../../utils/table-columns/employee-attendance";
 import { normalizeAttendanceSummary } from "../../utils/helper/attendance-summary";
 import { useAttendance } from "../../context/AttendanceContext";

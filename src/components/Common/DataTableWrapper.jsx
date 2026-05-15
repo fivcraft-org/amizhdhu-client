@@ -174,26 +174,32 @@ const DataTableWrapper = ({
   );
 
   return (
-    <>
+    <div>
       {/* Sub Tabs */}
       {subTabs.length > 0 && (
         <Tabs
           value={activeSubTab}
           onChange={onSubTabChange}
+          variant="pills"
           classNames={{
-            list: "border-b border-gray-300", // optional
-            tab: "px-6 py-2 rounded-t-lg border border-transparent data-[active=true]:bg-primary data-[active=true]:text-white data-[active=true]:border-primary!",
+            list: "gap-2 mb-2 p-1 bg-gray-50/50 rounded-2xl w-fit border border-gray-100 shadow-sm shadow-slate-100/50",
+            tab: "px-5 py-2 rounded-xl font-bold text-xs uppercase tracking-wider transition-all duration-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 data-[active=true]:bg-primary! data-[active=true]:text-white! data-[active=true]:shadow-md data-[active=true]:shadow-primary/10",
           }}
         >
           <Tabs.List>
             {subTabs.map((t) => (
               <Tabs.Tab key={t.key} value={t.key}>
-                {t.label}
-                {counts?.[t.key] !== undefined && (
-                  <span className="ml-2 text-xs font-semibold text-white px-2 py-0.5 rounded-full bg-primary!">
-                    {counts[t.key]}
-                  </span>
-                )}
+                <div className="flex items-center gap-2">
+                  {t.label}
+                  {counts?.[t.key] !== undefined && (
+                    <span className={`
+                      text-[10px] px-2 py-0.5 rounded-full font-black transition-colors duration-300
+                      ${activeSubTab === t.key ? "bg-white/20 text-white" : "bg-gray-200 text-gray-600"}
+                    `}>
+                      {counts[t.key]}
+                    </span>
+                  )}
+                </div>
               </Tabs.Tab>
             ))}
           </Tabs.List>
@@ -201,7 +207,7 @@ const DataTableWrapper = ({
       )}
 
       {/* CARD CONTAINER */}
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 mt-4">
+      <div className="bg-white border border-gray-100 rounded-xl shadow-sm shadow-slate-200/40 p-5 mt-4">
 
         {/* Search + Header Buttons */}
         {(search || filters || buttonConfig || headerConfig.items.length > 0) && (
@@ -210,6 +216,7 @@ const DataTableWrapper = ({
               <div key="dt-search-input" className="relative w-60">
                 <TextInput
                   placeholder="Search..."
+                  radius="md"
                   leftSection={<IconSearch size={16} />}
                   rightSection={
                     searchValue && (
@@ -243,7 +250,7 @@ const DataTableWrapper = ({
                     <Button
                       type="button"
                       onClick={buttonConfig.onAdd}
-                      className="bg-primary!"
+                      className="bg-primary! shadow-md shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 rounded-lg!"
                     >
                       {buttonConfig.addLabel || "Add"}
                     </Button>
@@ -294,9 +301,9 @@ const DataTableWrapper = ({
           <ScrollArea type={hideScrollbar ? "never" : "auto"} scrollbarSize={5}>
             <Table striped={false} highlightOnHover withColumnBorders={false}>
               {/* TABLE HEADER */}
-              <Table.Thead className="bg-gray-100 border-b border-gray-200">
+              <Table.Thead className="bg-gray-50/80 border-b border-gray-100">
                 <Table.Tr>
-                  <Table.Th className="w-16 py-3 font-semibold text-gray-700">
+                  <Table.Th className="w-16 py-4 px-4 font-bold text-[11px] text-gray-500 uppercase tracking-wider text-center">
                     S.No
                   </Table.Th>
 
@@ -306,10 +313,10 @@ const DataTableWrapper = ({
                       onClick={() =>
                         col.sortable && handleSort(col.sortField || col.field)
                       }
-                      className="py-3 px-3 font-semibold text-gray-700 cursor-pointer select-none whitespace-nowrap"
+                      className="py-4 px-4 font-bold text-[11px] text-gray-500 uppercase tracking-wider cursor-pointer select-none whitespace-nowrap transition-colors hover:text-gray-800 text-center"
                       style={{ width: col.width, minWidth: col.minWidth }}
                     >
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center justify-center gap-2">
                         {col.header}
 
                         {/* Sort Icons */}
@@ -344,8 +351,8 @@ const DataTableWrapper = ({
               <Table.Tbody>
                 {(loading ? Array(perPage).fill({}) : processedData).map(
                   (row, index) => (
-                    <Table.Tr key={row.id || row._id || index} className="hover:bg-gray-50">
-                      <Table.Td className="py-3">
+                    <Table.Tr key={row.id || row._id || index} className="hover:bg-gray-50/50 border-b border-gray-50 last:border-0 transition-colors">
+                      <Table.Td className="py-4 px-4 text-sm text-gray-600 font-medium text-center">
                         {loading ? (
                           <Skeleton height={20} width={25} radius="sm" />
                         ) : (
@@ -359,7 +366,7 @@ const DataTableWrapper = ({
                         return (
                           <Table.Td
                             key={col.field}
-                            className="py-3 px-3"
+                            className="py-4 px-4 text-sm text-gray-700 font-medium text-center"
                             style={{ width: col.width, minWidth: col.minWidth }}
                           >
                             {loading ? (
@@ -379,7 +386,7 @@ const DataTableWrapper = ({
 
                                       if (filteredActions.length <= 2) {
                                         return (
-                                          <div className="flex items-center gap-2">
+                                          <div className="flex items-center justify-center gap-2">
                                             {filteredActions.map((a, idx) => (
                                               <React.Fragment key={a.key || a.label || idx}>
                                                 {renderAction(a, row)}
@@ -390,7 +397,7 @@ const DataTableWrapper = ({
                                       }
 
                                       return (
-                                        <div className="flex items-center gap-2">
+                                        <div className="flex items-center justify-center gap-2">
                                           {filteredActions.slice(0, 2).map((a, idx) => (
                                             <React.Fragment key={a.key || a.label || idx}>
                                               {renderAction(a, row)}
@@ -474,7 +481,7 @@ const DataTableWrapper = ({
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Stack, Title, Text, Group, Tabs, Button, Paper, Badge, ActionIcon, Tooltip, Modal, TextInput, Select, Grid, Divider, FileInput } from '@mantine/core';
 import { IconFileUpload, IconFileText, IconAlertCircle, IconCheck, IconDownload, IconExternalLink, IconCalendar } from '@tabler/icons-react';
-import DataTableWrapper from '../../components/common/DataTableWrapper';
+import DataTableWrapper from '../../components/Common/DataTableWrapper';
 import { apiGetComplianceRecords, apiUploadComplianceRecord } from '../../api/super-admin';
 import { notifySuccess, notifyError } from '../../utils/services/toast/toast-service';
-import StatusBadge from '../../components/common/StatusBadge';
-import FullPageLoader from '../../components/common/FullPageLoader';
+import StatusBadge from '../../components/Common/StatusBadge';
+import FullPageLoader from '../../components/Common/FullPageLoader';
 import StatsCards from '../../components/StatsCards';
 import { formatDate } from '../../utils/helper/date-formatter';
 

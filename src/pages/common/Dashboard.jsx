@@ -4,7 +4,7 @@ import PlantOperatorDashboard from "../plant-operator/PlantOperatorDashboard";
 import HRDashboard from "../hr/HRDashboard";
 import MicrobiologistDashboard from "../microbiologist/MicrobiologistDashboard";
 import StorageDashboard from "../storaging/StorageDashboard";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 import HubManagerDashboard from "../hub-manager/HubManagerDashboard";
 import SuperAdminDashboard from "../super-admin/SuperAdminDashboard";
 

@@ -57,7 +57,7 @@ export default function CowLoader() {
                             left: '0',
                             width: '200%',
                             height: '3px',
-                            backgroundColor: '#006767',
+                            backgroundColor: 'var(--color-primary)',
                             opacity: 0.3,
                             animation: 'groundScroll 2s linear infinite',
                             zIndex: 1,
@@ -83,7 +83,7 @@ export default function CowLoader() {
                                 style={{
                                     width: '2px',
                                     height: '10px',
-                                    backgroundColor: '#006767',
+                                    backgroundColor: 'var(--color-primary)',
                                     opacity: 0.3,
                                 }}
                             />
@@ -96,12 +96,12 @@ export default function CowLoader() {
                         fw={800}
                         size="xl"
                         style={{
-                            color: '#006767',
+                            color: 'var(--color-primary)',
                             letterSpacing: '2px',
                             textTransform: 'uppercase',
                         }}
                     >
-                        Vezham
+                        AMIZHDHU
                     </Text>
                     <Text
                         c="dimmed"

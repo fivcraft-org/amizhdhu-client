@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import StatsCards from "../../components/StatsCards";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
-import FilterBar from "../../components/common/FilterBar";
-import StatusBadge from "../../components/common/StatusBadge";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
+import FilterBar from "../../components/Common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
 
 import { performance } from "../../utils/table-columns/performance";
 

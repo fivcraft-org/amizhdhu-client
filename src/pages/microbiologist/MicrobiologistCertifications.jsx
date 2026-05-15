@@ -1,8 +1,8 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
-import DataTableWrapper from "../../components/common/DataTableWrapper";
+import DataTableWrapper from "../../components/Common/DataTableWrapper";
 import { microbiologistCertificationsConfig } from "../../utils/table-columns/microbiologist-certifications";
-import StatusBadge from "../../components/common/StatusBadge";
-import FilterBar from "../../components/common/FilterBar";
+import StatusBadge from "../../components/Common/StatusBadge";
+import FilterBar from "../../components/Common/FilterBar";
 import { apiGetCertifications, apiUploadCertification } from "../../api/microbiologist";
 import { Modal, Button, TextInput, Select, Stack, Group, FileButton, Text, Badge, Paper, SimpleGrid, Box } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
@@ -10,7 +10,7 @@ import { notifySuccess, notifyError } from "../../utils/services/toast/toast-ser
 import { certificationSchema } from "../../utils/validators/microbiologist-validator";
 import { Upload, X, Calendar } from "lucide-react";
 import StatsCards from "../../components/StatsCards";
-import FullPageLoader from "../../components/common/FullPageLoader";
+import FullPageLoader from "../../components/Common/FullPageLoader";
 
 import totalBatchesIcon from "../../assets/icons/total-batches-icon.png";
 import approvedIcon from "../../assets/icons/approved-milk-icon.png";

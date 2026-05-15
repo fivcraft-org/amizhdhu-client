@@ -1,15 +1,15 @@
 import React, { useState, useMemo, useContext, useEffect, useCallback } from 'react';
 import { Stack, Text, Modal, Select, NumberInput, TextInput, Grid, Button, Group, Divider, Badge, Tooltip, Paper, ActionIcon } from '@mantine/core';
-import CustomTimePicker from "../../components/common/CustomTimePicker";
+import CustomTimePicker from "../../components/Common/CustomTimePicker";
 import { DateInput } from "@mantine/dates";
 import { IconPlus, IconEdit, IconTrash } from '@tabler/icons-react';
 import { notifications } from '@mantine/notifications';
 import StatsCards from '../../components/StatsCards';
-import DataTableWrapper from '../../components/common/DataTableWrapper';
-import StatusBadge from '../../components/common/StatusBadge';
-import FilterBar from '../../components/common/FilterBar';
+import DataTableWrapper from '../../components/Common/DataTableWrapper';
+import StatusBadge from '../../components/Common/StatusBadge';
+import FilterBar from '../../components/Common/FilterBar';
 import AuthContext from '../../context/AuthContext';
-import FormModal from '../../components/common/FormModal';
+import FormModal from '../../components/Common/FormModal';
 import { formatDate } from '../../utils/helper/date-formatter';
 // Services
 import { createInventoryRequest, getHubs, getInventoryRequests, getDashboardData, updateInventoryRequest, deleteInventoryRequest, confirmPartialApproval, rejectPartialApproval } from "../../api/hub-manager";

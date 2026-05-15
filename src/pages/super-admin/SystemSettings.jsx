@@ -3,7 +3,7 @@ import { Stack, Title, Text, Group, Paper, Switch, Select, NumberInput, Button, 
 import { IconSettings, IconWorld, IconAdjustments, IconLock, IconRefresh } from '@tabler/icons-react';
 import { apiGetSystemSettings, apiUpdateSystemSetting } from '../../api/super-admin';
 import { notifySuccess, notifyError } from '../../utils/services/toast/toast-service';
-import FullPageLoader from '../../components/common/FullPageLoader';
+import FullPageLoader from '../../components/Common/FullPageLoader';
 
 const SystemSettings = () => {
     const [loading, setLoading] = useState(false);
